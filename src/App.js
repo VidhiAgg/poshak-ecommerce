@@ -1,41 +1,36 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import logo from "./logo.png";
+import MockmanPage from "./frontend/pages/MockmanPage";
+import HomePage from "./frontend/pages/HomePage/HomePage";
+import ProductPage from "./frontend/pages/ProductPage";
+import {Navigation} from "./frontend/components/NavigationBar/Navigation";
+import IndivvidualProductPag from "./frontend/pages/IndividualProductPage";
+import Profile from "./frontend/pages/Profile";
+import SignupPage from "./frontend/pages/SignupPage";
+import AddressPage from "./frontend/pages/AddressManagement/AddressPage";
+import CategoriesPage from "./frontend/components/categories/CategoriesPage";
+import CartPage from "./frontend/pages/cartPage/CartPage"
+import Footer from "./frontend/components/Footer";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
+      <Navigation />
+     <Routes>
+      <Route path="/mockman" element ={<MockmanPage />}></Route>
+      <Route index path="/" element={<HomePage />}></Route>
+      <Route path="/products" element ={<ProductPage />}>
+      <Route path=":productId" element ={<IndivvidualProductPag/>}></Route>
+      </Route>
+      <Route path="/cart/" element ={<CartPage />}></Route>
+      <Route path="/profile" element ={<Profile />}></Route>
+      <Route path="/mockman" element ={<MockmanPage />}></Route>
+      <Route path="/categories/" element={<CategoriesPage />} />
+      <Route path="/signUp/" element={<SignupPage />} />
+      <Route path="/address/" element={<AddressPage />} />
+     </Routes>
+     <Footer/>
     </div>
   );
 }
