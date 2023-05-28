@@ -1,0 +1,65 @@
+.category{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+background-color: whitesmoke;
+border: 5px solid green;
+}
+.category h1{
+
+    font-size: 2rem;
+    margin-left: 4rem;
+}
+.category-link{
+    background-color:#ffffff80;
+}
+.layout{
+    border: 1px solid red;
+    align-self: center;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(1,1fr);
+}
+.layout p{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.men-category-card, .women-category-card, .child-category-card{
+display: flex;
+border: 1px solid white;
+color: white;
+flex-direction: column;
+width: 400px;
+height: 400px;
+background-size: 400px 400px;
+justify-content: space-around;
+}
+.men-category-card{
+    background-image: url("/public/assets/men-category-img.jpg");
+}
+.women-category-card{
+   background-image: url("/public/assets/women-category.jpg");
+}
+.child-category-card {
+    background-image: url("/public/assets/kids-header.jpg");
+    
+}
+
+.women-category-card:hover {
+   backdrop-filter: 5px;
+    
+    
+}
+.category-link{
+}
+
+
+@media(min-width : 786px){
+    .layout{
+        border: 1px solid red;
+        align-self: center;
+        display: grid;
+        grid-gap: 3rem;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
