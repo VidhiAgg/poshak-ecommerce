@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import MockmanPage from "./frontend/pages/MockmanPage";
 import HomePage from "./frontend/pages/HomePage/HomePage";
-import ProductPage from "./frontend/pages/ProductPage";
+
 import {Navigation} from "./frontend/components/NavigationBar/Navigation";
 import IndivvidualProductPag from "./frontend/pages/IndividualProductPage";
 import Profile from "./frontend/pages/Profile";
@@ -11,6 +11,7 @@ import AddressPage from "./frontend/pages/AddressManagement/AddressPage";
 import CategoriesPage from "./frontend/components/categories/CategoriesPage";
 import CartPage from "./frontend/pages/cartPage/CartPage"
 import Footer from "./frontend/components/Footer";
+import ProductPage from "./frontend/pages/ProductListingPage/ProductPage";
 
 
 function App() {
