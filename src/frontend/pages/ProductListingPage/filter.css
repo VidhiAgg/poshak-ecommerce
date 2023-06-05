@@ -1,0 +1,8 @@
+.price-range, .category-checkbox, .ratings-filter,.price-sort-filter{
+    display: flex;
+    flex-direction: column;
+}
+.price-label{
+    display: flex;
+    justify-content: space-between;
+}
