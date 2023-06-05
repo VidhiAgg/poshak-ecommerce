@@ -6,12 +6,14 @@
     display: flex;
     position: fixed;
     top: 0;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100vw;
     padding: 0.7rem 0.8rem ;
     box-shadow: 0 0px 0px rgb(245, 239, 239);
     cursor: pointer;
     align-items: center;
+    padding-bottom: 1rem;
+    
 }
 .header-name{
     
@@ -30,22 +32,28 @@
 }
 
 .menu-list{
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.8);
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 2.2rem;
-    right: 0;
+    top: 2.6rem;
+    right: 2.5rem;
+    align-content: center;
+    padding-left: 0.5rem;
 }
 .menu-list-items{
     list-style: none;
     /* margin: 0.2rem; */
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem;
     background-color: transparent;
+    color: white;
    
 }
 .menu-list-items:hover{
-    background-color: #062201ea;
+    border-radius: 0.5rem;
+    border-color: rgb(54, 3, 18);
+    background-color: rgb(218, 179, 200);
+    color: white;
     /* #ffffff80; */
     
 }
@@ -53,37 +61,74 @@
     text-decoration: none;
 }
 .nav-menu-item-text{
-    color: black;
+    color:rgb(54, 3, 18);
     display: flex;
     font-weight: 700;
-    margin-block-start: 0.2rem;
+    margin-block-start: 0rem;
+   
+}
 
-    
+.search-bar{
+    display: none;
+    flex-direction: row;
+    position: relative;
+    margin: auto;
+    left: 5rem;
+    width: 50%;
+}
+.search-input{
+    width: 20rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 @media (min-width : 786px){
 .nav-header{
     padding: 2.5rem 0.8rem;
+    height: 1rem;
+
 }
     .menu-list{
+        background-color: transparent;
+        color: white;
         display: flex;
         flex-direction: row;
-        top: 0;
-        right: 0;
-        padding: auto;
+        /* row-gap: 5rem; */
+        top: -0.5rem;
+        right: 2rem;
+        padding-left: 3rem;
+        
         position: fixed;
         justify-content: space-between;
         
     }
     .menu-button{
         display: none;
-        padding: 0.2rem 1.4rem;
+        padding: 0rem 1.4rem;
     }
-
+    .nav-menu-item-text{
+        color:white
+       
+    }
     .menu-list-items:hover{
         background-color:rgba(245, 239, 239, 0.068);
         /* #062201ea; */
         border-bottom: 1px solid white;
         
+    }
+
+    .search-bar{
+        display: none;
+        flex-direction: row;
+        position: relative;
+        margin: auto;
+        top: -0.5rem;
+        left: 0rem;
+        width: 50%;
+    }
+    .search-input{
+        width: 20rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
     }
 }

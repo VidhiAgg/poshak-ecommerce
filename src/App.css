@@ -1,7 +1,7 @@
 body{
   margin: 0;
-
-background: black;
+/* display: grid; */
+/* background: black; */
 /* background: linear-gradient(-90deg, rgb(183, 220, 255) 0%, rgba(255, 255, 255, 0.943) 100%); */
   font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

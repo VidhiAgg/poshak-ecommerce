@@ -3,7 +3,7 @@ import "./App.css";
 import MockmanPage from "./frontend/pages/MockmanPage";
 import HomePage from "./frontend/pages/HomePage/HomePage";
 
-import {Navigation} from "./frontend/components/NavigationBar/Navigation";
+import { Navigation } from "./frontend/components/NavigationBar/Navigation";
 import IndivvidualProductPag from "./frontend/pages/IndividualProductPage";
 import Profile from "./frontend/pages/Profile";
 import SignupPage from "./frontend/pages/SignupPage";
@@ -11,7 +11,7 @@ import AddressPage from "./frontend/pages/AddressManagement/AddressPage";
 import CategoriesPage from "./frontend/components/categories/CategoriesPage";
 import CartPage from "./frontend/pages/cartPage/CartPage"
 import Footer from "./frontend/components/Footer";
-import ProductPage from "./frontend/pages/ProductListingPage/ProductPage";
+import {ProductPage} from "./frontend/pages/ProductListingPage/ProductPage";
 
 
 function App() {
