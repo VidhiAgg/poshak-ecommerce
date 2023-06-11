@@ -11,17 +11,10 @@ export const ProductPage = () => {
   
 const [toggeFilter, setToggleFiter] = useState(false);
  const {filteredProducts} = useContext(ProductListContext);
-//  const{products} = useContext(APIContext)
-const productMapped = filteredProducts?.map(data=>
-  // <div className={styles['product-container']} key={data.id}>
-  //   <img src={data.image_url} />
-  //   <p>
-  //     Name : {data.name}
-  //   </p>
-  //   <p>Description:{data.description}</p>
-  // </div>
-  <ProductList {...data} key={data.id}/>
-  )
+const productMapped = filteredProducts?.length > 0 ?filteredProducts?.map(data=>
+
+  <ProductList {...data} key={data._id}/>
+  ) : <h1>Noting to display</h1>
 
   return (
 <>

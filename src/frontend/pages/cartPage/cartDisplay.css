@@ -1,0 +1,109 @@
+.cart-item-display{
+    display: flex;
+   border: 1px solid rgb(92, 91, 91);
+   border-radius: 0.5rem;
+   color: black;
+   padding: 15px;
+   row-gap: 1rem;
+   margin-bottom: 2rem;
+   width: 320px;
+}
+
+.cart-image-container{
+ display: flex;
+ justify-content: center;
+}
+.cart-image{
+    max-width: 100px;
+
+}
+
+.cart-title{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    padding-top: 0rem;
+    margin-top: 0rem;
+    justify-content: flex-start;
+    padding-left: 1.5rem;
+}
+.cart-title h2, p{
+    margin-block-start: 0;
+    margin-bottom: 10px;
+    
+}
+.card-price{
+    display: flex;
+}
+.current-price{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.orignal-price{
+    color: rgb(68, 68, 68);
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.card-quantity{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card-quantity span{
+    padding-top: 0.2rem;
+}
+.card-quantity button{
+    text-align: center;
+    border: none;
+    display: flex;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    align-items: center;
+    height: 2rem;
+
+}
+.decrement{
+    margin-right: 2rem;
+}
+.increment{
+    margin-left: 2rem;
+}
+.action-btn{
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-btn button{
+    margin-top: 1rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.action-btn button:hover, button:focus{
+    color: white;
+    font-weight: 700;
+    background-color: #F50057;
+}
+
+@media (min-width: 786px){
+    .cart-item-display{
+       width: 450px;
+    }
+    .cart-image{
+        width: 100px;
+        height: 200px;
+    
+    }
+    .action-btn{
+        flex-direction: row;
+       
+    }
+    .cart-btn{
+        margin-left: 1rem;
+    }
+
+}

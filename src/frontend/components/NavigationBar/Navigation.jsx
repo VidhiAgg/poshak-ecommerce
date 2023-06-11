@@ -42,19 +42,19 @@ export const Navigation = () => {
           </Link>
         </li>
         <li className="menu-list-items">
-          <Link className="menu-link">
+          <Link className="menu-link" to="/wishlist">
             <i className="material-icons">favorite</i>
             <p className="nav-menu-item-text">Wishlist</p>
           </Link>
         </li>
         <li className="menu-list-items">
-          <Link className="menu-link">
+          <Link className="menu-link" to="/cart">
             <i className="material-icons">shopping_cart</i>
             <p className="nav-menu-item-text">Bag</p>
           </Link>
         </li>
         <li className="menu-list-items">
-          <Link className="menu-link">
+          <Link className="menu-link" to="/profile">
             <i className="material-icons">person</i>
             <p className="nav-menu-item-text">Profile</p>
           </Link>

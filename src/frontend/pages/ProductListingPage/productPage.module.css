@@ -84,6 +84,7 @@ margin-bottom: 0.3px;
     background-color: black;
     color: white;
     padding: 10px;
+    cursor: pointer;
 }
 .product-desc{
     margin-top: 0.2rem;

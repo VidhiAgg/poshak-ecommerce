@@ -1,0 +1,28 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    margin-top: 7rem;
+    align-items: center;
+}
+
+.login-main{
+    display: flex;
+    flex-direction: column;
+   gap: 2rem;
+}
+
+input[type="email"],
+input[type="password"], button {
+  padding: 10px;
+  border: 1px solid rgb(65, 3, 41);
+  border-radius: 5px;
+}
+
+
+.login-input button, .login-button button{
+background-color: teal;
+width: 100%;
+    
+}

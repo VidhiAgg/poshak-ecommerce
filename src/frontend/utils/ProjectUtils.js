@@ -10,7 +10,8 @@ _RATINGS_ :"Ratings",
 _LOW_  : "low",
 _HIGH_: "high",
 _CLEAR_FILTER_:"Clear Filter",
-_SEARCH_FILTER_:"Search Product"
+_SEARCH_FILTER_:"Search Product",
+_DELIVERY_CHARGES: 100
 }
 
 export const ratings =[4,3,2,1];
