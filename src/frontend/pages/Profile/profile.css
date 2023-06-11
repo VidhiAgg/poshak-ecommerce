@@ -1,0 +1,9 @@
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    margin-top: 7rem;
+    align-items: center;
+}

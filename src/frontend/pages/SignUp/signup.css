@@ -1,0 +1,27 @@
+.signup-container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    margin-top: 7rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+input[type="email"],input[type="text"],
+input[type="password"], button {
+  padding: 10px;
+  border: 1px solid rgb(65, 3, 41);
+  border-radius: 5px;
+}
+
+@media (min-width: 786px) {
+    .signup-container{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        
+        margin-top: 10rem;
+        align-items: center;
+    }
+}

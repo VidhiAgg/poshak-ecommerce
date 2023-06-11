@@ -102,7 +102,7 @@ priceSort === Constants._LOW_ ?
 :filterByRating
 
 // const sortedData = 
-console.log(filteredProducts);
+//console.log(filteredProducts);
 
 
   return (

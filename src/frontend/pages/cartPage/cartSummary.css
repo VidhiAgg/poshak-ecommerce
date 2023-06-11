@@ -1,0 +1,75 @@
+.cart-summary{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 1rem;
+
+}
+.price-heading{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.1rem;
+}
+.price-heading h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.2em;
+    margin-block-end: 0em;
+
+    font-weight: bold;
+}
+.line-break{
+    margin-top: 0rem;
+    
+}
+
+.item-list,.price-content, .discount-content, .deleiver-charges-content, .total-amount{
+display: flex;
+justify-content: space-between;
+padding: 8px;
+}
+.item-list ul{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+}
+.item-list li{
+display: flex;
+
+justify-content: space-between;
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+}
+.orignal-price{
+    color: rgb(68, 68, 68);
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+.discount-statemnt{
+    color:  #F50057;;
+    margin-top: 0.2rem;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+}
+
+.checkout-btn{
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    background-color: #F50057;
+}
+
+@media (min-width: 786px) {
+    .cart-summary{
+        width: 480px;
+        height: fit-content;
+    }
+}
