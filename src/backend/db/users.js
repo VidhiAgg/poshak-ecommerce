@@ -13,6 +13,20 @@ export const users = [
     lastName: "Balika",
     email: "adarshbalika@gmail.com",
     password: "adarshbalika",
+    userAddress: [
+      {
+        id: uuid(),
+        firstName: "Adarsh",
+        lastName: "Balika",
+        addressLine1: "Sector 16",
+        addressLine2: "Metro Line 1",
+        city: "Noida",
+        state: "Uttar Pradesh",
+        zipCode: "234701",
+        country: "India",
+        mobile:"99999999"
+      },
+    ],
     createdAt: formatDate(),
     updatedAt: formatDate(),
   },

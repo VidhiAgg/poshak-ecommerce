@@ -23,7 +23,7 @@ const ProductList = (data) => {
 
   return (
 <div className={styles['product-container']} key={data._id}>
-    <div onClick={()=> navigate("/products/"+data._id)}
+    <div className={styles['product-detail']} onClick={()=> navigate("/products/"+data._id)}
 >
 
     <img src={data.image_url}  alt="home-page"/>
@@ -35,7 +35,7 @@ const ProductList = (data) => {
 
 
   </div>
-<div>
+<div className={styles['product-detail-btn']}>
  
 <button className={styles['wishlist-btn']}
     disabled={disableWishBtn}

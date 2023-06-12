@@ -19,7 +19,7 @@ export const products = [
     "size" : "M",
     "rating" :"4",
     "quantity":"5",
-    "image_url": "11523274349300-Roadster-Men-Navy-Blue-Solid-Henley-Neck-T-shirt-4911523274349105-1.jpg (210×280) (myntassets.com)"
+    "image_url": "https://m.media-amazon.com/images/I/713n+TxyfCL._AC_UL320_.jpg"
   },
   {
     _id : uuid(),
@@ -34,7 +34,7 @@ export const products = [
      "size" : "L",
      "rating" :"3",
      "quantity":"5",
-    "image_url": "499aed44-5272-46be-8a6b-f44b9f1a6edd1683104062498-HRX-by-Hrithik-Roshan-Men-Tshirts-1421683104061159-1.jpg (210×280) (myntassets.com)"
+    "image_url": "https://m.media-amazon.com/images/I/51tO4Xm4YLL._AC_UL320_.jpg"
   },
 
   {  _id : uuid(),

@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 3rem;
 background-color: whitesmoke;
-border: 5px solid green;
+
 }
 .category h1{
 
@@ -14,7 +14,7 @@ border: 5px solid green;
     background-color:#ffffff80;
 }
 .layout{
-    border: 1px solid red;
+
     align-self: center;
     display: grid;
     grid-gap: 0.5rem;
@@ -55,7 +55,7 @@ cursor: pointer;
 
 @media(min-width : 786px){
     .layout{
-        border: 1px solid red;
+   
         align-self: center;
         display: grid;
         grid-gap: 3rem;

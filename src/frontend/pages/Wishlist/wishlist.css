@@ -1,0 +1,30 @@
+.wishlist-main{
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 5rem 2rem 0rem ;
+    
+}
+.wish-heading h1{
+    text-align: center;
+}
+.wish-content{
+    display: flex;
+    justify-content: center;
+
+}
+.wish-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+@media (min-width: 786px) {
+    .wishlist-main{
+        margin: 10rem 5rem 0rem ;
+       
+    }
+}

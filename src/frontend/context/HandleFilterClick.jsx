@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react'
-import { ProductListContext } from '../../context/ProductListingContext/ProductListContext';
-import {ProjectUtils as Constants} from '../../utils/ProjectUtils'
+import { ProductListContext } from './ProductListingContext/ProductListContext';
+import {ProjectUtils as Constants} from "../utils/ProjectUtils"
 export const HandleFilterClickContext = createContext();
 
 export const HandleFilterClickProvider = ({children}) => {

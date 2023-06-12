@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { createContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import {v4 as uuid} from "uuid"
 
 export const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
@@ -15,7 +16,7 @@ export const AuthContextProvider = ({ children }) => {
     userInfo: loginStorageUser?.user,
     isLoggedIn: loginStorageUser ? true : false,
     isError: loginStorageUser ? false : true,
-    errorMessage: null,
+    errorMessage: null
   });
 
   async function signUp(email, firstName, lastName, password) {
@@ -42,15 +43,7 @@ export const AuthContextProvider = ({ children }) => {
       });
       localStorage.setItem("token", JSON.stringify({ token: encodedToken }));
       localStorage.setItem("user", JSON.stringify({ user: createdUser }));
-      //navigate
-      console.log(location?.state?.from);
-      console.log(location?.state?.from?.pathname)
-      if (location?.state?.from) {
-        navigate(location?.state?.from?.pathname);
-      } else {
-        navigate("/");
-      }
-
+console.log(loginData);
       }else{
         setLoginData({
           ...loginData,
@@ -140,9 +133,58 @@ export const AuthContextProvider = ({ children }) => {
       navigate("/");
     }
   }
+function addNewAddress(payload){
 
+  const setUpNewAddress = loginData?.userInfo?.userAddress ? [...loginData?.userInfo?.userAddress,
+  {...payload, id: uuid()}] : [{...payload, id:uuid()}]
+
+  setLoginData({
+    ...loginData,
+    user: {
+      ...loginData.userInfo,
+      userAddress: setUpNewAddress,
+    },
+  });
+  localStorage.setItem(
+    "user",
+    JSON.stringify({
+      user: { ...loginData.userInfo, userAddress: setUpNewAddress },
+    })
+  );
+
+  toast.success("Address Added!");
+}
+function editAddress(updatedAddressesPayload){
+  setLoginData({
+    ...loginData, userInfo : {
+      ...loginData.userInfo, userAddress: updatedAddressesPayload
+    }
+  })
+  localStorage.setItem("user", JSON.stringify({user:{...loginData.userInfo, userAddress: updatedAddressesPayload}}))
+
+  toast.success("Address updated")
+
+}
+function deleteAddress(payload){
+
+  const filteredData = loginData.userInfo.userAddress.filter(data => data.id !== payload)
+
+  setLoginData({
+    ...loginData, userInfo : {
+      ...loginData.userInfo, userAddress: filteredData
+    }
+  })
+  localStorage.setItem("user", JSON.stringify({user:{...loginData.userInfo, userAddress: payload}}))
+
+  toast.success("Address deleted")
+
+}
   return (
-    <AuthContext.Provider value={{ loginUser, loginData, signOut, signUp }}>
+    <AuthContext.Provider value={{ loginUser, loginData, signOut, signUp,
+      addNewAddress, 
+      editAddress,
+      deleteAddress
+       }}>
       {children}
     </AuthContext.Provider>
   );

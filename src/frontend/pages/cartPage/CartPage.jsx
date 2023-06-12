@@ -11,7 +11,7 @@ const CartPage = () => {
   const navigate  = useNavigate();
   const cartEmpty = cartItems?.length === 0 && (
     <>
-    <img src=" /assets/add_to_cart.svg" alt = "cart-empty"  onClick={()=> navigate("/products")}/>
+    <img src=" /assets/add_to_cart.svg" width="250px" alt = "cart-empty"  onClick={()=> navigate("/products")}/>
     <h1>Hey, it feels so light</h1>
     <p>There is nothing in your bag. Let's add some items.</p>
     </>

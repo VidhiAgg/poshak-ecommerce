@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { ProjectUtils as Constants } from "../../utils/ProjectUtils";
 const CartSummary = ({cartOrCheckouPage}) => {
 
-  const {cartItems,setCartItem, disableCartBtn,setDisableCartBtn, 
+  const {cartItems,setCartItem,
     order,setOrder} = useContext(CartListContext);
   const navigate  = useNavigate();
   const totalQuantity = cartItems?.reduce((total,{qty})=> total + qty,0)
@@ -17,7 +17,7 @@ const discount = totalPrice - totalPayPrice
 if(cartOrCheckouPage === "cart"){
   navigate("/checkout")
 }else{
-  
+  // placeAnOrder(cartItems,setCartItem,order, setOrder);
 }
 }
   return (
