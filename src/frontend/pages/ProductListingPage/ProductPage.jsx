@@ -5,16 +5,21 @@ import FilterPanel from './FilterPanel'
 
 import ProductList from './ProductList';
 import { ProductListContext } from '../../context/ProductListingContext/ProductListContext';
+import { AuthContext } from '../../context/AuthContext/AuthContext';
 // import { APIContext } from '../../context/APIContext';
 
 export const ProductPage = () => {
   
 const [toggeFilter, setToggleFiter] = useState(false);
  const {filteredProducts} = useContext(ProductListContext);
+ const {} = useContext(AuthContext);
 const productMapped = filteredProducts?.length > 0 ?filteredProducts?.map(data=>
 
   <ProductList {...data} key={data._id}/>
-  ) : <h1>Noting to display</h1>
+  ) : <><h1>Noting to display</h1>
+  <img src=" /assets/notfound.svg" width="250px" alt = "cart-empty" />
+  
+  </>
 
   return (
 <>

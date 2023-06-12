@@ -70,3 +70,6 @@ export const removeItemFromCart = async (
     setDisableCartBtn(false);
   }
 };
+
+
+// const placeAnOrder(cartItems,setCartItem,order, setOrder)

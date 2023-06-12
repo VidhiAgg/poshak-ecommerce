@@ -75,14 +75,18 @@ margin-bottom: 0.3px;
     padding: 7px;
     border: 1px solid transparent;
     border-radius: 1rem;
-    color: white;
-    background-color: rgb(160, 4, 30);
+    color: rgba(15, 41, 4, 0.884);;
+    
+    background-color: rgba(84, 224, 18, 0.884);
 }
 .wishlist-btn, .cart-btn {
+    
+    margin: 0.5rem;
+    font-size: 1rem;
+    border: none;
     font-weight: 600;
     margin-top: 1rem;
-    background-color: black;
-    color: white;
+
     padding: 10px;
     cursor: pointer;
 }
@@ -107,14 +111,20 @@ margin-bottom: 0.3px;
 }
 
 .show-filter-button {
-    background-color: #2a2a2a;
+    background-color: rgba(241, 7, 105, 0.849);
     display: flex;
     color: white;
     cursor: pointer;
     border-style: none;
     border-radius: 4px;
+    
     margin: 0px auto;
-    padding: 9px;
+    padding: 5px;
+}
+.product-detail, .product-detail-btn{
+    display: flex;
+    flex-direction: column;
+
 }
 
 .filterPanel {
@@ -200,6 +210,9 @@ margin-bottom: 0.3px;
         top: 10.2rem;
         width: 17%;
         height: fit-content;
+        background-color: white;
+        box-shadow: none;
+        margin-left: 1rem;
     }
 
     .clr-button{

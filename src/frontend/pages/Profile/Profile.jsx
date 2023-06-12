@@ -9,9 +9,11 @@ const Profile = () => {
   const navigate = useNavigate();
   return (
     <div className='profile-container'>
-      {console.log(loginData)}
+     
 <h1>Profile</h1>
-<button>Manage Address</button>
+<div className='profile-details'>
+  <h1>Welcome, {loginData.userInfo.firstName}{" "} {loginData.userInfo.lastName}</h1>
+<button onClick={()=>navigate("/address")}>Manage Address</button>
 {loginData?.isLoggedIn && <button onClick={()=>signOut()}>Sign Out</button>}
 
 {!loginData?.isLoggedIn && 
@@ -19,6 +21,8 @@ const Profile = () => {
   <button onClick={()=>navigate("/login")}>Login In </button>
   </div>
 }
+</div>
+
 
 
     </div>

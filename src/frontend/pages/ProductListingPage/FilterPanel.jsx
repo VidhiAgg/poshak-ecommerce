@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import styles from './productPage.module.css'
 import './filter.css'
 import { ProductListContext } from '../../context/ProductListingContext/ProductListContext'
-import { HandleFilterClickContext } from './HandleFilterClick'
+import { HandleFilterClickContext } from '../../context/HandleFilterClick'
 import { ratings, ProjectUtils as Constants } from '../../utils/ProjectUtils'
 const FilterPanel = () => {
 

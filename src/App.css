@@ -1,5 +1,18 @@
+
+:root{
+  --primaryHighlightedColor: #F50057;
+
+  --white-color: #ffffff;
+
+  --bg-color-2: #ddd;
+
+  --bg-color: #eeeeee;
+  --bg-color-4: #818080;
+  --bg-color-3: #f9f9f9;
+}
 body{
   margin: 0;
+  background-color: var(--bg-color);
 /* display: grid; */
 /* background: black; */
 /* background: linear-gradient(-90deg, rgb(183, 220, 255) 0%, rgba(255, 255, 255, 0.943) 100%); */
@@ -9,5 +22,13 @@ body{
   color: #f3f2f1;
   font-size: 2rem;
 } 
-
+button{
+  border: none;
+}
+button:hover, button:focus{
+  color: white;
+  font-weight: 700;
+  background-color: #F50057;
+  cursor: pointer;
+}
 

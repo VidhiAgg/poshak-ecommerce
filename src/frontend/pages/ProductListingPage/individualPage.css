@@ -1,0 +1,22 @@
+.product-detail-container{
+    display: flex;
+    gap: 3rem;
+    margin: 10rem 2rem 0rem ;
+    justify-content: space-between;
+    
+}
+
+.p-details{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+@media  (min-width: 786px){
+    .product-detail-container{
+        margin: 10rem 5rem 0rem ;
+        justify-content: space-around;
+
+    }
+}

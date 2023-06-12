@@ -17,6 +17,7 @@ import { PrivateRouter } from "./frontend/components/PrivateRouter";
 import WishListPage from "./frontend/pages/Wishlist/WishListPage";
 import ProductDetailPage from "./frontend/pages/ProductListingPage/IndividualProductPage";
 import CheckoutPage from "./frontend/pages/checkoutPage/CheckoutPage";
+import AddNewAddress from "./frontend/pages/AddressManagement/AddNewAddress";
 
 function App() {
   return (
@@ -54,6 +55,12 @@ function App() {
         <AddressPage />
         </PrivateRouter>
         } />
+
+<Route path="/addNewAddress/" element={
+        <PrivateRouter>
+        <AddNewAddress />
+        </PrivateRouter>
+        } />
         <Route path="/checkout/" element={
         <PrivateRouter>
         <CheckoutPage />
@@ -74,7 +81,7 @@ function App() {
         theme="light"
         transition={Slide}
       />
-      <Footer />
+
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-
-import styles from "./productPage.module.css"
+import "./individualPage.css"
 import { APIContext } from '../../context/APIContext'
 import { AuthContext } from '../../context/AuthContext/AuthContext';
 import { useNavigate, useParams } from 'react-router-dom'
@@ -27,16 +26,27 @@ getProductDetail(productId,setProduct,setLoader)
     <div>
 {loader && <h1>Loading</h1>}
 
-    <div className={styles['product-container']} key={product._id}>
-
+    <div className='product-detail-container' key={product._id}>
+    <div className='p-img'>
     <img src={product?.image_url}  alt="home-page"/>
-    <b >{product.name}
-    </b>
-    <p className={styles['product-desc']}>{product.description}</p>
-    <p><b>₹{product.price}</b></p>
-<p className={styles['product-rating']}>{product.rating} star</p>
+    </div>
+    <div className='p-details'>
+      <div className="heading">
+      <h1>  {product.name}
+   </h1>
+      </div>
+      <div className="p-meta">
+      <p>{product.description}</p>
+      <p>Brand: {product.brand}</p>
+      <p>Size: {product.size}</p>
+      
+      <p><b>OrignalPrice : ₹{product.orignalPrice}</b></p>
+    <p><b>Discounted Price: ₹{product.price}</b></p>
+    <p className='product-rating'>{product.rating} star</p>
+      </div>
 
-    <button className={styles['wishlist-btn']}
+<div className="p-btn">
+<button className='wishlist-btn'
     disabled={disableWishBtn}
     onClick={()=>{
       if(loginData.isLoggedIn){
@@ -53,7 +63,7 @@ getProductDetail(productId,setProduct,setLoader)
     {wishlist?.find(({_id: selectedId})=> selectedId === product._id) ? "Remove From list"
     :
     "Add to WishList"}</button>
-    <button className={styles['cart-btn']}disabled={disableCartBtn}
+    <button className='cart-btn'disabled={disableCartBtn}
     onClick={()=>{
       if(loginData.isLoggedIn){
         cartItems?.find(({_id: selectedId})=> selectedId === product._id ?
@@ -69,6 +79,14 @@ getProductDetail(productId,setProduct,setLoader)
     {cartItems?.find(({_id: selectedId})=> selectedId === product._id) ? "Remove From Cart"
     :
     "Add to Cart"}</button>
+
+</div>
+    </div>
+  
+    
+
+
+    
   </div>
     </div>
   )
