@@ -138,7 +138,7 @@ function addNewAddress(payload){
 
   setLoginData({
     ...loginData,
-    user: {
+    userInfo: {
       ...loginData.userInfo,
       userAddress: setUpNewAddress,
     },
