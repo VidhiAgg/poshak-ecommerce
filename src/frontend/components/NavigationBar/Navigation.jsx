@@ -7,7 +7,7 @@ import {ProjectUtils as Constants} from '../../utils/ProjectUtils'
 export const Navigation = () => {
     const [showMenu, setShowMenu] = useState();
     const [showSearchBar, setSearchBar] = useState(false);
-    const {productsDispatch} = useContext(ProductListContext);
+    const {productsDispatch, filters} = useContext(ProductListContext);
 
     const navigate = useNavigate();
   
@@ -21,7 +21,7 @@ export const Navigation = () => {
       </Link>
 
       <div className="search-bar" style={{display:showSearchBar && "flex" }} ><label>
-      <input  className="search-input" onClick = {()=> navigate("/products")}type="text"
+      <input value={filters.search}  className="search-input" onClick = {()=> navigate("/products")}type="text"
        placeholder="Search Product" 
       onChange={(event)=> 
         {
