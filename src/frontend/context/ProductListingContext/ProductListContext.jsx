@@ -66,9 +66,6 @@ const priceSortByHigh =(filterByRating)=>
 
 filterByRating.sort(({price: price1 },{price : price2}) => price2-price1)
 
-console.log(filters.search)
-
-
 const filterBySearch = searchText.length > 0 ? 
 products.filter(({name} )=> 
   name.toLowerCase().includes(searchText.toLowerCase())   

@@ -31,14 +31,14 @@ const WishListPage = () => {
       <h1>WishList</h1>
       </div>
       {wishListEmpty}
-      <div className='wish-content'>
+
 <div className='wish-items'>
     {wishListMapped}
    
 </div>
 
 
-    </div>
+
     </div>
   )
 }

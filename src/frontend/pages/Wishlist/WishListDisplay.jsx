@@ -38,7 +38,7 @@ const WishListDisplay = (item) => {
 <img className='wish-image' src = {image_url} alt = "item"/>
     </div>
 
-        <div className='wish-content'>
+        <div className='wishlist-content'>
             <div className="wish-title">
             <h2>
              {name}
@@ -51,11 +51,11 @@ const WishListDisplay = (item) => {
             </div>
     </div>
     <div className="action-btn">
-        <button className="wishlist-btn" disabled={disableWishBtn}
+        <button className=" color wishlist-btn" disabled={disableWishBtn}
                 onClick={()=>handleCartButtonClick(_id)}
                 >
                     {isItemInCartList(_id) ? "Go to Cart" : "Move to Bag"}</button>
-                <button className="cart-btn" 
+                <button className="  cart-btn " 
                 disabled={disableCartBtn}
                 onClick={()=>handleDeleteFromWish(_id)}>Remove from Wishlist</button>
 

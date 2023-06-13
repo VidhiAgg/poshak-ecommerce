@@ -12,11 +12,18 @@
    
 }
 
-
+.back-btn{
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
 @media  (min-width: 786px){
     .product-detail-container{
         margin: 10rem 5rem 0rem ;
         justify-content: space-around;
 
+    }
+    .back-btn{
+        margin-top: 7rem;
+        margin-left: 5rem;
     }
 }

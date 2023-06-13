@@ -5,7 +5,7 @@ import { ProductListContext } from "../../context/ProductListingContext/ProductL
 import {ProjectUtils as Constants} from '../../utils/ProjectUtils'
 
 export const Navigation = () => {
-    const [showMenu, setShowMenu] = useState(false);
+    const [showMenu, setShowMenu] = useState();
     const [showSearchBar, setSearchBar] = useState(false);
     const {productsDispatch} = useContext(ProductListContext);
 
@@ -20,7 +20,7 @@ export const Navigation = () => {
         Poshak
       </Link>
 
-      <div className="search-bar" style={{display:showSearchBar ? "flex" :"none" }} display><label>
+      <div className="search-bar" style={{display:showSearchBar && "flex" }} ><label>
       <input  className="search-input" onClick = {()=> navigate("/products")}type="text"
        placeholder="Search Product" 
       onChange={(event)=> 
@@ -34,7 +34,7 @@ export const Navigation = () => {
       </label>
       </div>
       <i className = "material-icons menu-button" onClick={()=>setShowMenu(!showMenu)}>menu</i>
-      <ul className="menu-list" style={{display:showMenu ? "flex" :"none"}}>
+      <ul className="menu-list" style={{display:showMenu  && "flex" }}>
         <li className="menu-list-items">
           <Link className="menu-link" onClick={()=>setSearchBar(!showSearchBar)}>
             <i className="material-icons">search</i>
