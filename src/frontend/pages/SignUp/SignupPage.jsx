@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState,useEffect } from "react";
 import "./signup.css";
 import { AuthContext } from "../../context/AuthContext/AuthContext";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const SignupPage = () => {
@@ -11,6 +11,8 @@ const SignupPage = () => {
     password: false,
     confirmPassword: false
   })
+  const navigate = useNavigate();
+  const location = useLocation();
   const emailRegex= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   
   const validateInput = (input, re)=> re.test(input)
@@ -42,14 +44,19 @@ const SignupPage = () => {
 
     signUp(signUpData.email.trim(), signUpData.firstName.trim(),
     signUpData.lastName.trim(), signUpData.password.trim());
-
+    setValidateError(null)
   };
 
 
   const isAPIError = loginData.isError &&  <p>{loginData.errorMessage}</p>;
   const dataValidateError  = validateError && <p>{validateError}</p>
   
-  
+  useEffect(()=>{
+    if (loginData.isLoggedIn) {
+      navigate("/profile");
+    }
+    }, [loginData.isLoggedIn, navigate, location]);
+
   const showIcon = showPassword.password ?
   <AiFillEyeInvisible onClick ={()=> 
     setShowPassword({...showPassword, password: false})

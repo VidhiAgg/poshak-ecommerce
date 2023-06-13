@@ -43,7 +43,7 @@ export const AuthContextProvider = ({ children }) => {
       });
       localStorage.setItem("token", JSON.stringify({ token: encodedToken }));
       localStorage.setItem("user", JSON.stringify({ user: createdUser }));
-console.log(loginData);
+
       }else{
         setLoginData({
           ...loginData,
@@ -88,9 +88,7 @@ console.log(loginData);
           errorMessage: null,
         });
         toast.success("Login successfull!");
-        console.log(location);
-        console.log(location?.state?.from);
-        console.log(location?.state?.from?.pathname)
+
         localStorage.setItem("token", JSON.stringify({ token: encodedToken }));
         localStorage.setItem("user", JSON.stringify({ user: foundUser }));
 
