@@ -25,7 +25,7 @@ getProductDetail(productId,setProduct,setLoader)
   return (
     <div>
 {loader && <h1>Loading</h1>}
-
+    <button className='back-btn' onClick={()=>navigate(-1)}>Go Back</button>
     <div className='product-detail-container' key={product._id}>
     <div className='p-img'>
     <img src={product?.image_url}  alt="home-page"/>
