@@ -21,15 +21,16 @@ const WishListDisplay = (item) => {
     const isItemInCartList = (productID) => cartItems.find(({_id})=> _id === productID)
 
     const handleDeleteFromWish =(productID) =>{
-        removeItemFromWishlist(productID,loginData.token,setWishList, setDisableWishBtn)
+        removeItemFromWishlist(productID,loginData.token,setWishList, setDisableWishBtn);
+
     }
     
     const handleCartButtonClick = (productID) =>{
         if(!isItemInCartList(productID)){
             addItemToCart(item,loginData.token,setCartItem,setDisableCartBtn)
         }else{
-            toast.error("Already added in Wishlist.");
-            navigate("/wishlist")
+            
+            navigate("/cart")
         }
     }
   return (
